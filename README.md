@@ -11,7 +11,8 @@ Version numbers can be created with 2, 3, and 4 version components. 
 Major.Minor are always used at a minimum and are expected to be correct in the AssemblyInfo file in the project. 
 An AssemblyInfo.cs file is automatically added to SQL Server Database projects by selecting the SQLCLR property page 
 in the project properties and clicking the Assembly Information ... button.
- 
+![](/Visual Studio 2015 SSDT Project Properties - SQLCLR Tab.png?raw=true "Tasks")
+
 <image style="padding-left:25px;" height="400" width="409" src="Visual Studio 2015 SSDT Project Properties - SQLCLR Tab.png" />
  
 With the Assembly Information dialog open, enter the minimum information, which is Major, Minor, and Assembly Title. 
