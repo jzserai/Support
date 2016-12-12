@@ -38,12 +38,13 @@ for display in your  software. The other two version attributes are b
 After the build completes, the assembly will have all three version attributes set correctly. To verify, download the build 
 output from VSTS and unzip it to your hard drive. Navigate to the folder with MyDatabase.dll and display its properties. Your 
 assembly will be named with the value you entered in the project properties SQLCLR property page under Assembly name at the top. 
-The default value for this  property is the project name. There is seldom reason to change it.  
+The default value for this  property is the project name. There is seldom reason to change it. 
+![](/Visual Studio 2015 SSDT Build Output Assembly Properties.png?raw=true "SSDT Project Build Output File Properties")
 <image style="padding-left:25px;" height="456" width="420" src="Visual Studio 2015 SSDT Build Output Assembly Properties.png" />
  
 If you elected to also version a DacPac, you can verify it is correctly set by navigating to the build folder you extracted 
 to your  local hard drive where the MyDatabase.dacpac file resides. Right-click it and select <b>Unpack...</b> .  
-![](/DotNetVersioner/images/File Explorer DacPac Unpack.png?raw=true "Unpack the DacPac file")
+![](/File Explorer DacPac Unpack.png?raw=true "Unpack the DacPac file")
 <image style="padding-left:25px;" height="275" width="493" src="DotNetVersioner/images/File Explorer DacPac Unpack.png" />  
  
 Notice in the above image the File version, Product version, and Product name values.  
