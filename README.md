@@ -8,7 +8,7 @@ A build task that applies a full, point-in-time version number to .Ne
 #### Overview ####
  
 Version numbers can be created with 2, 3, and 4 version components.  
-Major.Minor are always used at a minimum and are expected to be correct in the AssemblyInfo.* file in the project. 
+Major.Minor are always used at a minimum and are expected to be correct in the AssemblyInfo file in the project. 
 An AssemblyInfo.cs file is automatically added to SQL Server Database projects by selecting the SQLCLR property page 
 in the project properties and clicking the Assembly Information ... button.
  
@@ -25,7 +25,7 @@ allows you to have unique versions for each project if desired.  
 If you want to use Semantic versioning for the Product Version, which is actually the AssemblyInformationalVersion 
 attribute, then add  the third version component called the patch number. See [Semantic Versioning 2.0.0](http://semver.org/) for the definition and how to use it. However, you cannot the AssemblyInformationalVersion in 
 the Assembly Information dialog. Instead, open the AssemblyInfo.cs file in your text editor and manually add the 
-attribute to the end right after  AssemblyFileVersion, as shown.  
+attribute to the end right after AssemblyFileVersion, as shown.  
 <image style="padding-left:25px;" height="260" width="303" src="Visual Studio 2015 SSDT Project Properties - AssemblyInfo.cs With User Updates.png" />
  
  
