@@ -12,7 +12,7 @@ Major.Minor are always used at a minimum and are expected to be corr
 An AssemblyInfo.cs file is automatically added to SQL Server Database projects by selecting the SQLCLR property page 
 in the project properties and clicking the Assembly Information ... button.
  
-<image style="padding-left:25px;" height="400" width="409" src="DotNetVersioner/images/Visual Studio 2015 SSDT Project Properties - SQLCLR Tab.png" />
+<image style="padding-left:25px;" height="400" width="409" src="Visual Studio 2015 SSDT Project Properties - SQLCLR Tab.png" />
  
 With the Assembly Information dialog open, enter the minimum information, which is Major, Minor, and Assembly Title. 
 Assembly Title is used to ensure the correct assembly gets its version updated when there are multiple projects in a 
@@ -20,13 +20,13 @@ solution and more than one AssemblyInfo file exists. If you want to 
 projects, simply add this build task for each project and ensure the AssemblyInfo file is properly filled in. This 
 allows you to have unique versions for each project if desired.  
  
-<image style="padding-left:25px;" height="260" width="303" src="DotNetVersioner/images/Visual Studio 2015 SSDT Project Properties - Assembly Information Dialog.png" />
+<image style="padding-left:25px;" height="260" width="303" src="Visual Studio 2015 SSDT Project Properties - Assembly Information Dialog.png" />
  
 If you want to use Semantic versioning for the Product Version, which is actually the AssemblyInformationalVersion 
 attribute, then add  the third version component called the patch number. See [Semantic Versioning 2.0.0](http://semver.org/) for the definition and how to use it. However, you cannot the AssemblyInformationalVersion in 
 the Assembly Information dialog. Instead, open the AssemblyInfo.cs file in your text editor and manually add the 
 attribute to the end right after  AssemblyFileVersion, as shown.  
-<image style="padding-left:25px;" height="260" width="303" src="DotNetVersioner/images/Visual Studio 2015 SSDT Project Properties - AssemblyInfo.cs With User Updates.png" />
+<image style="padding-left:25px;" height="260" width="303" src="Visual Studio 2015 SSDT Project Properties - AssemblyInfo.cs With User Updates.png" />
  
  
  
@@ -38,7 +38,7 @@ After the build completes, the assembly will have all three version a
 output from VSTS and unzip it to your hard drive. Navigate to the folder with MyDatabase.dll and display its properties. Your 
 assembly will be named with the value you entered in the project properties SQLCLR property page under Assembly name at the top. 
 The default value for this  property is the project name. There is seldom reason to change it.  
-<image style="padding-left:25px;" height="456" width="420" src="DotNetVersioner/images/Visual Studio 2015 SSDT Build Output Assembly Properties.png" />
+<image style="padding-left:25px;" height="456" width="420" src="Visual Studio 2015 SSDT Build Output Assembly Properties.png" />
  
 If you elected to also version a DacPac, you can verify it is correctly set by navigating to the build folder you extracted 
 to your  local hard drive where the MyDatabase.dacpac file resides. Right-click it and select <b>Unpack...</b> .  
@@ -46,7 +46,7 @@ to your  local hard drive where the MyDatabase.dacpac file resides. Ri
  
 Notice in the above image the File version, Product version, and Product name values.  
  
-A command window will appear along with an Unpack Microsoft SQL Server DAC Package File dialog to select the destination 
+A command window will appear along with an Unpack Microsoft SQL Server DAC Package File dialog to select the destination  
 of the unpacked files. Accept the default and click the Unpack button. After a few moments a folder will appear in the 
 current folder named the same as the DacPac file. Enter the folder and open the DacMetadata.xml file. Verify the <DacVersion> 
 xml element has the correct version number in it.  
