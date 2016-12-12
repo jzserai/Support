@@ -13,7 +13,6 @@ An AssemblyInfo.cs file is automatically added to SQL Server Database 
 in the project properties and clicking the Assembly Information ... button.
 ![](/Visual Studio 2015 SSDT Project Properties - SQLCLR Tab.png?raw=true "SSDT Project Properties")
 
-<image style="padding-left:25px;" height="400" width="409" src="Visual Studio 2015 SSDT Project Properties - SQLCLR Tab.png" />
  
 With the Assembly Information dialog open, enter the minimum information, which is Major, Minor, and Assembly Title. 
 Assembly Title is used to ensure the correct assembly gets its version updated when there are multiple projects in a 
@@ -22,14 +21,13 @@ projects, simply add this build task for each project and ensure the�
 allows you to have unique versions for each project if desired.  
 
 ![](/Visual Studio 2015 SSDT Project Properties - Assembly Information Dialog.png?raw=true "Assembly Information Dialog")
-<image style="padding-left:25px;" height="260" width="303" src="Visual Studio 2015 SSDT Project Properties - Assembly Information Dialog.png" />
  
 If you want to use Semantic versioning for the Product Version, which is actually the AssemblyInformationalVersion 
-attribute, then add  the third version component called the patch number. See [Semantic Versioning 2.0.0](http://semver.org/) for the definition and how to use it. However, you cannot the AssemblyInformationalVersion in 
-the Assembly Information dialog. Instead, open the AssemblyInfo.cs file in your text editor and manually add the 
-attribute to the end right after AssemblyFileVersion, as shown.
+attribute, then add  the third version component called the patch number. See [Semantic Versioning 2.0.0](http://semver.org/) 
+for the definition and how to use it. However, you cannot the AssemblyInformationalVersion in the Assembly Information dialog. 
+Instead, open the AssemblyInfo.cs file in your text editor and manually add the attribute to the end right after 
+AssemblyFileVersion, as shown. 
 ![](/Visual Studio 2015 SSDT Project Properties - AssemblyInfo.cs With User Updates.png?raw=true "Assembly Information")
-<image style="padding-left:25px;" height="260" width="303" src="Visual Studio 2015 SSDT Project Properties - AssemblyInfo.cs With User Updates.png" />
  
  
 Following the .Net Framework model, it is best to use 4 part versions for both the AssemblyVersion and AssemblyFileVersion 
@@ -41,12 +39,10 @@ output from VSTS and unzip it to your hard drive. Navigate to the f
 assembly will be named with the value you entered in the project properties SQLCLR property page under Assembly name at the top. 
 The default value for this  property is the project name. There is seldom reason to change it. 
 ![](/Visual Studio 2015 SSDT Build Output Assembly Properties.png?raw=true "SSDT Project Build Output File Properties")
-<image style="padding-left:25px;" height="456" width="420" src="Visual Studio 2015 SSDT Build Output Assembly Properties.png" />
  
 If you elected to also version a DacPac, you can verify it is correctly set by navigating to the build folder you extracted 
 to your  local hard drive where the MyDatabase.dacpac file resides. Right-click it and select <b>Unpack...</b> .  
 ![](/File Explorer DacPac Unpack.png?raw=true "Unpack the DacPac file")
-<image style="padding-left:25px;" height="275" width="493" src="DotNetVersioner/images/File Explorer DacPac Unpack.png" />  
  
 Notice in the above image the File version, Product version, and Product name values.  
  
@@ -79,7 +75,7 @@ DotNetVersioner takes 7 mandatory arguments:
  
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
-    number defined on the General tab of the build definition. An example build number format is:
+    number defined on the General tab of the build definition. An example build number format is:  
  
     $(Build.DefinitionName)_$(Year:yyyy)_$(Month)_$(DayofMonth)_$(Year:yy)_$(DayOfYear)_$(Rev:r)
  
