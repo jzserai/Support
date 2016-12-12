@@ -32,14 +32,15 @@ AssemblyFileVersion, as shown.
 ![](/Visual Studio 2015 SSDT Project Properties - AssemblyInfo.cs With User Updates.png?raw=true "Assembly Information")
  
  
-Following the .Net Framework model, it is best to use 4 part versions for both the AssemblyVersion and AssemblyFileVersion 
-attributes. Use semantic versioning for the AssemblyInformationalVersion attribute. Then, use the AssemblyInformationalVersion 
-for display in your  software. The other two version attributes are better suited for internal use and tracking.  
+Following the .Net Framework model, it is best to use 4 part versions for both the AssemblyVersion and 
+AssemblyFileVersion attributes. Use semantic versioning for the AssemblyInformationalVersion attribute. Then, 
+use the AssemblyInformationalVersion for display in your software. The other two version attributes are better 
+suited for internal use and tracking.  
  
 After the build completes, the assembly will have all three version attributes set correctly. To verify, download the build 
-output from VSTS and unzip it to your hard drive. Navigate to the folder with MyDatabase.dll and display its properties. Your 
-assembly will be named with the value you entered in the project properties SQLCLR property page under Assembly name at the top. 
-The default value for this  property is the project name. There is seldom reason to change it.
+output from VSTS and unzip it to your hard drive. Navigate to the folder with MyDatabase.dll and display its properties. 
+Your assembly will be named with the value you entered in the project properties SQLCLR property page under Assembly name 
+at the top. The default value for this  property is the project name. There is seldom reason to change it.
 
 ![](/Visual Studio 2015 SSDT Build Output Assembly Properties.png?raw=true "SSDT Project Build Output File Properties")
  
@@ -79,9 +80,9 @@ DotNetVersioner takes 7 mandatory arguments:
  
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
-    number defined on the General tab of the build definition. An example build number format is:  
- 
-    $(Build.DefinitionName)_$(Year:yyyy)_$(Month)_$(DayofMonth)_$(Year:yy)_$(DayOfYear)_$(Rev:r)
+    number defined on the General tab of the build definition. An example build number format is:
+    
+    $(Build.DefinitionName)_$(Year:yyyy)_$(Month)_$(DayofMonth)_$(Year:yy)_$(DayOfYear)_$(Rev:r)
  
     The underscores are used here so that this build number can be used when naming the 
     Server Artifact where the build output is stored. Using periods makes this very unwieldy.
