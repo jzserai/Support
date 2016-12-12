@@ -20,6 +20,7 @@ Assembly Title is used to ensure the correct assembly gets its versio
 solution and more than one AssemblyInfo file exists. If you want to version the assemblies in a solution with many 
 projects, simply add this build task for each project and ensure the AssemblyInfo file is properly filled in. This 
 allows you to have unique versions for each project if desired.  
+
 ![](/Visual Studio 2015 SSDT Project Properties - Assembly Information Dialog.png?raw=true "Assembly Information Dialog")
 <image style="padding-left:25px;" height="260" width="303" src="Visual Studio 2015 SSDT Project Properties - Assembly Information Dialog.png" />
  
@@ -95,8 +96,7 @@ DotNetVersioner takes 7 mandatory arguments:
     for example, then the AssemblyFileVersion will be set to the Major.Minor values you 
     originally set in the AssemblyInfo file. The third and fourth parts are the BuildNumber 
     and revision. The BuildNumber is the 2 digit year and the 3 digit day of year. In VSTS 
-    this can be specified with the build 
-    variables $(Year:yy)$(DayOfYear).
+    this can be specified with the build variables $(Year:yy)$(DayOfYear).
  
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
@@ -160,7 +160,9 @@ DotNetVersioner takes 7 mandatory arguments:
  
  
  
-    The SQL Server Database project file itself. Ex: MyDatabaseProject.sqlproj
-    This is used only if "Set DacPac version" is yes.
+    The SQL Server Database project file itself. Ex: MyDatabaseProject.sqlproj  
+    
+    This is used only if 'Set DacPac version' is yes.
+    
 
 </div>
