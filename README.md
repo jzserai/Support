@@ -14,7 +14,11 @@ in the project properties and clicking the Assembly Information ... bu
  
 <image style="padding-left:25px;" height="400" width="409" src="DotNetVersioner/images/Visual Studio 2015 SSDT Project Properties - SQLCLR Tab.png" />
  
-With the Assembly Information dialog open, enter the minimum information, which is Major, Minor, and Assembly Title. Assembly Title is  used to ensure the correct assembly gets its version updated when there are multiple projects in a solution and more than one   AssemblyInfo.* file exist. If you want to version the assemblies in a solution with many projects, simply add this build task for each  project and ensure the AssemblyInfo file is properly filled in. This allows you to have unique versions for each project if desired.  
+With the Assembly Information dialog open, enter the minimum information, which is Major, Minor, and Assembly Title. 
+Assembly Title is used to ensure the correct assembly gets its version updated when there are multiple projects in a 
+solution and more than one AssemblyInfo file exists. If you want to version the assemblies in a solution with many 
+projects, simply add this build task for each project and ensure the AssemblyInfo file is properly filled in. This 
+allows you to have unique versions for each project if desired.  
  
 <image style="padding-left:25px;" height="260" width="303" src="DotNetVersioner/images/Visual Studio 2015 SSDT Project Properties - Assembly Information Dialog.png" />
  
