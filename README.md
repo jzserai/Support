@@ -113,7 +113,7 @@ DotNetVersioner takes 7 mandatory arguments:
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
     number defined on the General tab of the build definition. An example build number format is  
- 
+   
     $(Build.DefinitionName)\_$(Year:yyyy)\_$(Month)\_$(DayofMonth)\_$(Year:yy)\_$(DayOfYear)\_$(Rev:r)  
  
     The underscores are used here so that this build number can be used when naming the 
@@ -138,7 +138,7 @@ DotNetVersioner takes 7 mandatory arguments:
     number defined on the General tab of the build definition. An example build number format is  
  
     $(Build.DefinitionName)\_$(Year:yyyy)\_$(Month)\_$(DayofMonth)\_$(Year:yy)\_$(DayOfYear)\_$(Rev:r)  
- 
+   
     The underscores are used here so that this build number can be used when naming the Server Artifact 
     where the build output is stored. Using periods makes this very unwieldy.
  
