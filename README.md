@@ -83,10 +83,10 @@ DotNetVersioner takes 7 mandatory arguments:
     then the AssemblyVersion will be set to the Major.Minor values you originally set in the 
     AssemblyInfo file. The third and fourth parts are the BuildNumber and revision. The BuildNumber 
     is the 2 digit year and the 3 digit day of year. In VSTS this can be specified with the build 
-    variables  
-    
-    $(Year:yy)$(DayOfYear).
- 
+    variables   
+      
+    $(Year:yy)$(DayOfYear)  
+     
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
     number defined on the General tab of the build definition. An example build number format is  
@@ -132,7 +132,7 @@ DotNetVersioner takes 7 mandatory arguments:
     In VSTS this can be specified with the build variables   
       
     $(Year:yy)$(DayOfYear)  
-   
+    
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
     number defined on the General tab of the build definition. An example build number format is  
