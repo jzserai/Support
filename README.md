@@ -106,16 +106,16 @@ DotNetVersioner takes 7 mandatory arguments:
     for example, then the AssemblyFileVersion will be set to the Major.Minor values you 
     originally set in the AssemblyInfo file. The third and fourth parts are the BuildNumber 
     and revision. The BuildNumber is the 2 digit year and the 3 digit day of year. In VSTS 
-    this can be specified with the build variables
-    
-    $(Year:yy)$(DayOfYear).
+    this can be specified with the build variables  
+      
+    $(Year:yy)$(DayOfYear)
  
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
     number defined on the General tab of the build definition. An example build number format is  
-   
+    
     $(Build.DefinitionName)\_$(Year:yyyy)\_$(Month)\_$(DayofMonth)\_$(Year:yy)\_$(DayOfYear)\_$(Rev:r)  
- 
+   
     The underscores are used here so that this build number can be used when naming the 
     Server Artifact where the build output is stored. Using periods makes this very unwieldy.
  
@@ -129,16 +129,16 @@ DotNetVersioner takes 7 mandatory arguments:
     specified, for example, then the AssemblyInformationalVersion will be set to the Major.Minor 
     values you originally set in the AssemblyInfo file. The third and fourth parts are the 
     BuildNumber and revision. The BuildNumber is the 2 digit year and the 3 digit day of year. 
-    In VSTS this can be specified with the build variables  
-    
-    $(Year:yy)$(DayOfYear).
- 
+    In VSTS this can be specified with the build variables   
+      
+    $(Year:yy)$(DayOfYear)  
+   
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
     number defined on the General tab of the build definition. An example build number format is  
- 
-    $(Build.DefinitionName)\_$(Year:yyyy)\_$(Month)\_$(DayofMonth)\_$(Year:yy)\_$(DayOfYear)\_$(Rev:r)  
-   
+    
+    $(Build.DefinitionName)\_$(Year:yyyy)\_$(Month)\_$(DayofMonth)\_$(Year:yy)\_$(DayOfYear)\_$(Rev:r)   
+      
     The underscores are used here so that this build number can be used when naming the Server Artifact 
     where the build output is stored. Using periods makes this very unwieldy.
  
