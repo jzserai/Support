@@ -33,7 +33,8 @@ allows you to have unique versions for each project if desired.  
  
 If you want to use Semantic versioning for the Product Version, which is actually the AssemblyInformationalVersion 
 attribute, then add  the third version component called the patch number. See [Semantic Versioning 2.0.0](http://semver.org/) 
-for the definition and how to use it. However, you cannot edit the AssemblyInformationalVersion in the Assembly Information 
+for the definition and how to use it. 
+However, you cannot edit the AssemblyInformationalVersion in the Assembly Information 
 dialog. Instead, open the AssemblyInfo.cs file in your text editor and manually add the attribute to the end right after 
 AssemblyFileVersion, as shown. 
 
@@ -82,13 +83,15 @@ DotNetVersioner takes 7 mandatory arguments:
     then the AssemblyVersion will be set to the Major.Minor values you originally set in the 
     AssemblyInfo file. The third and fourth parts are the BuildNumber and revision. The BuildNumber 
     is the 2 digit year and the 3 digit day of year. In VSTS this can be specified with the build 
-    variables $(Year:yy)$(DayOfYear).
+    variables  
+    
+    $(Year:yy)$(DayOfYear).
  
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
-    number defined on the General tab of the build definition. An example build number format is:
-    
-    $(Build.DefinitionName)_$(Year:yyyy)_$(Month)_$(DayofMonth)_$(Year:yy)_$(DayOfYear)_$(Rev:r)
+    number defined on the General tab of the build definition. An example build number format is  
+      
+    $(Build.DefinitionName)\_$(Year:yyyy)\_$(Month)\_$(DayofMonth)\_$(Year:yy)\_$(DayOfYear)\_$(Rev:r)  
  
     The underscores are used here so that this build number can be used when naming the 
     Server Artifact where the build output is stored. Using periods makes this very unwieldy.
@@ -103,13 +106,15 @@ DotNetVersioner takes 7 mandatory arguments:
     for example, then the AssemblyFileVersion will be set to the Major.Minor values you 
     originally set in the AssemblyInfo file. The third and fourth parts are the BuildNumber 
     and revision. The BuildNumber is the 2 digit year and the 3 digit day of year. In VSTS 
-    this can be specified with the build variables $(Year:yy)$(DayOfYear).
+    this can be specified with the build variables
+    
+    $(Year:yy)$(DayOfYear).
  
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
-    number defined on the General tab of the build definition. An example build number format is:
+    number defined on the General tab of the build definition. An example build number format is  
  
-    $(Build.DefinitionName)_$(Year:yyyy)_$(Month)_$(DayofMonth)_$(Year:yy)_$(DayOfYear)_$(Rev:r)
+    $(Build.DefinitionName)\_$(Year:yyyy)\_$(Month)\_$(DayofMonth)\_$(Year:yy)\_$(DayOfYear)\_$(Rev:r)  
  
     The underscores are used here so that this build number can be used when naming the 
     Server Artifact where the build output is stored. Using periods makes this very unwieldy.
@@ -124,13 +129,15 @@ DotNetVersioner takes 7 mandatory arguments:
     specified, for example, then the AssemblyInformationalVersion will be set to the Major.Minor 
     values you originally set in the AssemblyInfo file. The third and fourth parts are the 
     BuildNumber and revision. The BuildNumber is the 2 digit year and the 3 digit day of year. 
-    In VSTS this can be specified with the build variables $(Year:yy)$(DayOfYear).
+    In VSTS this can be specified with the build variables  
+    
+    $(Year:yy)$(DayOfYear).
  
     The revision is set by VSTS when the build starts. It is extracted from the $(Build.BuildNumber) 
     build variable and requires that the $(Rev:r) build variable is the final component of the build 
-    number defined on the General tab of the build definition. An example build number format is:
+    number defined on the General tab of the build definition. An example build number format is  
  
-    $(Build.DefinitionName)_$(Year:yyyy)_$(Month)_$(DayofMonth)_$(Year:yy)_$(DayOfYear)_$(Rev:r)
+    $(Build.DefinitionName)\_$(Year:yyyy)\_$(Month)\_$(DayofMonth)\_$(Year:yy)\_$(DayOfYear)\_$(Rev:r)  
  
     The underscores are used here so that this build number can be used when naming the Server Artifact 
     where the build output is stored. Using periods makes this very unwieldy.
