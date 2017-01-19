@@ -1,12 +1,20 @@
 Releases
  
-- 1.0.x - Initial release
- 
+- 1.0.0 - Initial release  
+- 1.0.1 - Bug fix  
+- 1.0.2 - Bug fix, readme formatting  
+- 1.0.3 - Readme formatting  
+- 1.0.4 - Readme update  
+- 1.0.5 - Added version history  
+- 1.0.6 - Added more information about project version (current)  
  
 A build task that applies a full, point-in-time version number to .Net assemblies and DacPacs.
  
 #### Overview ####
- 
+It is almost always true that by the time a build is ready for Staging, User Acceptance, or some other pre-production environment, the developer or team leader can establish the major, minor, and patch (if used) numbers.  These version numbers should be checked in with the latest changes before the build to ensure the final assembly  and DacPac versions are correct.  
+To summarize, before the project is built in VSTS or TFS, the AssemblyInfo.cs|.vb file should have all 3 assembly  version attributes setwith Major.Minor.0.0. The AssemblyInofrmationalVersion (aka Product Version) may have a  third patch number as well.   
+Ex: Major = 5, Minor = 1, Patch = 1: <b>5.1.1</b>
+
 Version numbers can be created with 2, 3, and 4 version components.  
 Major.Minor are always used at a minimum and are expected to be correct in the AssemblyInfo file in the project. 
 An AssemblyInfo.cs file is automatically added to SQL Server Database projects by selecting the SQLCLR property page 
@@ -25,7 +33,7 @@ allows you to have unique versions for each project if desired.  
  
 If you want to use Semantic versioning for the Product Version, which is actually the AssemblyInformationalVersion 
 attribute, then add  the third version component called the patch number. See [Semantic Versioning 2.0.0](http://semver.org/) 
-for the definition and how to use it. However, you cannot the AssemblyInformationalVersion in the Assembly Information 
+for the definition and how to use it. However, you cannot edit the AssemblyInformationalVersion in the Assembly Information 
 dialog. Instead, open the AssemblyInfo.cs file in your text editor and manually add the attribute to the end right after 
 AssemblyFileVersion, as shown. 
 
@@ -48,8 +56,6 @@ If you elected to also version a DacPac, you can verify it is corre
 to your  local hard drive where the MyDatabase.dacpac file resides. Right-click it and select <b>Unpack...</b> .
 
 ![](/File Explorer DacPac Unpack.png?raw=true "Unpack the DacPac file")
- 
-Notice in the above image the File version, Product version, and Product name values.  
  
 A command window will appear along with an Unpack Microsoft SQL Server DAC Package File dialog to select the destination  
 of the unpacked files. Accept the default and click the Unpack button. After a few moments a folder will appear in the 
